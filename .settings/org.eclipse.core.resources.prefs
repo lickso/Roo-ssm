@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/roo/shiro/core/intercpetor/LoginIntercpetor.java=UTF-8
+encoding//src/main/java/com/roo/ssm/controller/BaseController.java=UTF-8
+encoding//src/main/java/com/roo/utils/SysConfig.java=UTF-8
+encoding//src/main/resources/config/shiro/commonUrl.properties=UTF-8
+encoding//src/main/resources/config/shiro/limitUrl.properties=UTF-8
+encoding//src/main/resources/config/shiro/shiro-first.ini=UTF-8
+encoding//src/main/resources/config/system/system.properties=UTF-8
+encoding//src/main/webapp/WEB-INF/common/index/showProdList.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/test/fail.jsp=UTF-8
+encoding//src/main/webapp/static/css/person/carts.css=UTF-8
+encoding//src/main/webapp/static/css/person/stylepc.css=UTF-8
+encoding//src/main/webapp/static/css/register/index.css=UTF-8
+encoding/<project>=UTF-8

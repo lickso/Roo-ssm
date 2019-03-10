@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.roo.ssm.dao.Product_ArtdesignDao">
+
+	<!-- 根据关键词与页数查询美工设计产品信息-->
+   <select id="queryProduct_ArtdesignByKeywordsAndPageNumber" resultType="com.roo.ssm.bean.Product_Artdesign">    
+        select * from coo_product_artdesign where 
+        	title like   '%${keywords}%'  or  tip like '%${keywords}%'
+        		order by viewcount desc 
+        			limit #{start} , #{end}
+   </select>
+
+	<!-- 根据id查询用户信息 -->
+   <select id="queryObjectByID" resultType="com.roo.ssm.bean.Product_Artdesign">    
+        select * from coo_product_artdesign where 
+        	id =  #{id}  
+   </select>
+	
+
+
+
+	<!-- 用户信息添加 【基类操作】-->
+	<!-- <insert id="insert" parameterType="com.roo.ssm.bean.Product_Artdesign">
+		insert into coo_product_artdesign(
+                    id,
+                    title,
+                    tip,
+                    type,
+                    state,
+                    price,
+                    discount,
+                    viewcount                  
+        )values(
+                    #{id},
+                    #{title},
+                    #{tip},
+                    #{type},
+                    #{state},
+                    #{price},
+                    #{discount},
+                    #{viewcount}   
+        )
+    </insert>   -->
+    
+    <!-- 用户信息删除（将状态置为不可用） -->
+    <!-- <insert id="delete" parameterType="com.roo.ssm.bean.User">
+		insert into coo_user(
+                    id,
+                    name,
+                    nickname,
+                    password,
+                    registertime,
+                    lastlogintime,
+                    state                  
+        )values(
+                    #{id},
+                    #{name},
+                    #{nickname},
+                    #{password},
+                    #{registertime},
+                    #{lastlogintime},
+                    #{state}   
+        )
+    </insert>   -->
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- 根据用户id查询信息 -->
+    <!-- <select id="qryUserById" parameterType="String" resultType="com.roo.ssm.bean.User">    
+        select * from user where id = #{id}    
+    </select> -->
+    
+    <!-- <insert id="addUser" parameterType="User">
+    insert into user(name,password) values(#{name},#{password})  
+	</insert> -->
+
+	<!-- <select id="qryUserById" parameterType="String" resultType="com.roo.ssm.bean.User">    
+        select * from user where id = #{id}    
+    </select>  -->
+
+
+    <!--注意sql语句没有分号结尾  -->  
+      
+    <!-- <insert id="addUser" parameterType="User">  
+        insert into user(id,name,password) values(#{id},#{name},#{password})  
+    </insert>  --> 
+      
+    <!--注意这里的参数类型是parameterType而不是parameterMap，因为返回的是单个类型  -->  
+     <!-- <select id="findUserByNameAndPwd"  parameterType="map"  resultType="com.roo.ssm.bean.User">  
+        select t.name,t.password from t_user t where name=#{name} and password=#{password}  
+    </select> -->
+    
+    <!-- 后加功能项，删除，修改，查询 -->
+    <!-- <delete id="deleteUser" parameterType="int"> 
+    	delete from t_user 
+    	 where id = #{id} 
+    </delete>    
+    <update id="editUser" parameterType="User"> 
+    	update t_user 
+    	 set name =  #{name} ,
+    	 password = #{password}
+    	  where id = #{id}
+    </update>
+	<select id="qryUserById" parameterType="int" resultType="User">    
+        select * from t_user where id = #{id}    
+    </select>  
+    <select id="findAll" resultType="User">    
+        select * from t_user    
+    </select>    -->
+</mapper> 

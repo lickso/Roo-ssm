@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.roo.ssm.dao.User_CreditsoperateDao">
+
+	<!-- 通过用户id查询积分操作实例 -->
+	<select id="queryOperatesumByUserId" parameterType="int" resultType="java.lang.Integer">   
+        select coo_user_creditsoperate.operatesum from coo_user_creditsoperate where userid = #{userId}    
+    </select>
+    
+    <!-- 通过用户id查询签到积分操作实例 -->
+	<select id="querySignInOperatesumByUserId" parameterType="int" resultType="java.lang.Integer">   
+        select coo_user_creditsoperate.operatesum from coo_user_creditsoperate where userid = #{userId}  and operatetype = '2'
+    </select>
+    
+    <!-- 积分操作对象添加-（基类） -->
+	<insert id="insert" parameterType="com.roo.ssm.bean.User_Creditsoperate"  useGeneratedKeys="true" keyProperty="id">
+		insert into coo_user_creditsoperate(
+                    userid,
+                    operatedate,
+                    operatetype,
+                    operatesum,
+                    des,
+                    state                  
+        )values(
+                    #{userid},
+                    #{operatedate},
+                    #{operatetype},
+                    #{operatesum},
+                    #{des},
+                    #{state}   
+        )
+    </insert>  
+    
+</mapper> 

@@ -1,0 +1,81 @@
+body {
+  width: 100%;
+}
+
+
+.div {
+	margin-left:0%;
+	height:250px;
+	width: 100%;
+	background: black;
+	padding:0;
+  }
+
+  .bottom-list {
+	margin:0 auto;
+	height:200px;
+	width: 20%;
+	background: red;
+	margin:0 auto;
+  }
+
+  .list-01 {
+	height:200px;
+	width: 33%;
+	background: black;
+  }
+  
+  .list-02 {
+	height:200px;
+	width: 33%;
+	background: black;
+	margin-top:-200px;
+	margin-left:33.5%;
+	
+  }
+  .list-03 {
+	height:200px;
+	width: 33%;
+	background: black;
+	margin-top:-200px;
+	margin-left:67%;
+  }
+  
+   .linkbar {
+	height:20px;
+	width: 30%;
+	margin:0 auto;
+  }
+  
+  .bottom-corpration {
+	width: 12%;
+	height:30px;
+	margin:0 auto;
+  }
+  
+  .a-font {
+	font-size:20sp;
+	color: white;
+	margin:0 auto;
+  }
+  
+  .corpration {
+	font-size:20sp;
+	color: white;
+	margin:0 auto;
+  }
+  
+  .li-first {
+	font-size:25sp;
+	color: white;
+	margin:0 auto;
+  }
+  
+  .li-list {
+	text-decoration: none;
+	font-size:20sp;
+	color: white;
+	margin:0 auto;
+  }
+
+  

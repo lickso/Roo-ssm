@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.roo.ssm.dao.User_PlaceDao">
+
+	<!-- 通过用户id查询角色id -->
+	<select id="queryPlaceByUserId" parameterType="int" resultType="java.lang.String">   
+        select coo_user_place.name from coo_user_place where userid = #{userId}    
+    </select>
+	
+</mapper> 
